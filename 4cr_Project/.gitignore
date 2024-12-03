@@ -1,0 +1,55 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Visual Studio files
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Unity generated files
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+
+# Unity auto-generated metadata files
+Assets/**/*.meta
+
+# Cache and configuration
+*.unitypackage
+*.prefab*
+*.pidb
+*.bak
+*.swp
+*.tmp
+*.tmp.*
+
+# Crash reports
+sysinfo.txt
+
+# Lightmap cache directory
+LightmapSnapshot/
+
+# ProBuilder autosave
+/Assets/ProBuilder/
+
+# Rider IDE files
+.idea/
+*.iml
+out/
+
+# VSCode files
+.vscode/
+*.code-workspace
