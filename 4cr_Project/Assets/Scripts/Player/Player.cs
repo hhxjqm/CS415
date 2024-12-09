@@ -29,8 +29,8 @@ public class Player : Entity
     public PlayerWallSlideState wallSlide {get; private set;}
     public PlayerWallJumpState wallJump {get; private set;}
     public PlayerPrimaryAttack primaryAttack {get; private set;}
-
     public PlayerDashState dashState {get; private set;}    
+    public PlayerDeadState deadState {get; private set;}
 
     protected override void Awake()
     {
@@ -45,6 +45,9 @@ public class Player : Entity
         wallSlide = new PlayerWallSlideState(this,stateMachine,"WallSlide");
         wallJump = new PlayerWallJumpState(this,stateMachine,"WallJump");
         primaryAttack = new PlayerPrimaryAttack(this,stateMachine,"Attack");
+
+        
+        deadState = new PlayerDeadState(this,stateMachine,"Die");
     }
 
     protected override void Start()
@@ -92,5 +95,11 @@ public class Player : Entity
             return true;
         else
             return false;
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        stateMachine.ChangeState(deadState);
     }
 }
